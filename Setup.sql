@@ -1,9 +1,9 @@
-USE burgershack713;
+USE burgerrepo;
 
 -- MySql : MongoDb => Table : Collection
 
 -- CREATE COLLECTION
--- CREATE TABLE burgers
+-- CREATE TABLE combos
 -- (
 --     id INT AUTO_INCREMENT,
 --     name VARCHAR(255) NOT NULL UNIQUE,
@@ -40,7 +40,7 @@ USE burgershack713;
 
 -- DANGER ZONE
 -- DELETE FROM burgers; -- DELETES ALL DATA IN TABLE
--- DROP TABLE burgers; -- DESTROYS WHOLE TABLE
+DROP TABLE fries; -- DESTROYS WHOLE TABLE
 -- DROP DATABASE burgershack713; -- DESTROYS WHOLE DATABASE
 
 
@@ -66,5 +66,5 @@ USE burgershack713;
 -- VALUES
 -- (10.67, 3) 
 
-SELECT * FROM combos
+-- SELECT * FROM combos
  -- JOIN 
