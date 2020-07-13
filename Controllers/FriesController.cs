@@ -10,11 +10,11 @@ namespace BurgerShack.Controllers
   [Route("api/[controller]")]
   public class FriesController : ControllerBase
   {
-    private readonly BurgerService _service;
+    private readonly FryService _service;
     private readonly ComboService _comboService;
 
 
-    public FriesController(BurgerService service, ComboService cs)
+    public FriesController(FryService service, ComboService cs)
     {
       _service = service;
       _comboService = cs;
@@ -33,18 +33,7 @@ namespace BurgerShack.Controllers
       }
     }
 
-    [HttpGet("{id}/combos")] // GETBYID
-    public ActionResult<IEnumerable<DbCombo>> GetByFryId(int id)
-    {
-      try
-      {
-        return Ok(_comboService.GetByFryId(id));
-      }
-      catch (Exception e)
-      {
-        return BadRequest(e.Message);
-      }
-    }
+
 
     [HttpGet("{id}")] // GETBYID
     public ActionResult<Fry> Get(int id)

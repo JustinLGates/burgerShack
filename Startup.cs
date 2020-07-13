@@ -42,6 +42,7 @@ namespace BurgerShack
       // Repositories
       services.AddTransient<BurgerRepository>();
       services.AddTransient<ComboRepository>();
+      services.AddTransient<FryRepository>();
 
     }
 

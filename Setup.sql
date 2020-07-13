@@ -3,11 +3,11 @@ USE burgerrepo;
 -- MySql : MongoDb => Table : Collection
 
 -- CREATE COLLECTION
--- CREATE TABLE combos
+-- CREATE TABLE fries
 -- (
 --     id INT AUTO_INCREMENT,
 --     name VARCHAR(255) NOT NULL UNIQUE,
---     description VARCHAR(255),
+--     size VARCHAR(255),
 --     price DECIMAL(6, 2) NOT NULL,
 
 --     PRIMARY KEY (id)
@@ -40,7 +40,7 @@ USE burgerrepo;
 
 -- DANGER ZONE
 -- DELETE FROM burgers; -- DELETES ALL DATA IN TABLE
-DROP TABLE fries; -- DESTROYS WHOLE TABLE
+-- DROP TABLE combos; -- DESTROYS WHOLE TABLE
 -- DROP DATABASE burgershack713; -- DESTROYS WHOLE DATABASE
 
 
@@ -53,11 +53,16 @@ DROP TABLE fries; -- DESTROYS WHOLE TABLE
 --     id INT NOT NULL AUTO_INCREMENT,
 --     price DECIMAL(6, 2) DEFAULT 9.00,
 --     burgerId INT NOT NULL,
+--     fryId INT NOT NULL,
 
 --     PRIMARY KEY (id),
 
 --     FOREIGN KEY (burgerId)
 --         REFERENCES burgers (id)
+--         ON DELETE CASCADE,
+
+--     FOREIGN KEY (fryId)
+--         REFERENCES fries (id)
 --         ON DELETE CASCADE
 -- );
 
